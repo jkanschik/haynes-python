@@ -1,0 +1,8 @@
+django
+django-tailwind
+django-tailwind[reload]
+
+mysqlclient
+
+python-decouple
+python-dotenv
