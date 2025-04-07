@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from web.views import landing_page
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', landing_page, name='landing-page'),  # Route the homepage
 
     path("__reload__/", include("django_browser_reload.urls")),
 ]
