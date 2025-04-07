@@ -1,4 +1,5 @@
 {% load static tailwind_tags %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,10 +10,88 @@
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-blue-10 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex bg-blue-50 items-center justify-center h-screen">
-				<h1 class="text-5xl">ssssDjango + Tailwind = ❤️</h1>
+	<body class="bg-blue-10 font-sans-serif leading-normal tracking-normal">
+
+		<nav class="bg-gray-800">
+			<div class="bg-[url(/static/web/images/background.jpg)] bg-cover container mx-auto flex justify-between items-center">
+
+				<img src="{% static 'web/images/title.png' %}" class="" height="20px">
+
+				<div class="space-x-4">
+					<a href="#" class="text-gray-300 hover:text-white">Home</a>
+					<a href="#" class="text-gray-300 hover:text-white">About</a>
+					<a href="#" class="text-gray-300 hover:text-white">Services</a>
+					<a href="#" class="text-gray-300 hover:text-white">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="mx-auto w-5/8">
+
+			<section class="flex bg-gray-10 items-center justify-center my-10">
+				<h1 class="text-5xl">Welcome to The Haynes Catalog</h1>
+			</section>
+
+			<section class="bg-blue-50 my-10 py-5 -mx-10 px-10">
+				<h1 class="font-semi-bold text-2xl text-gray-900 ">Quick Search</h1>
+				<div class="grid grid-cols-6 gap-y-6 my-5">
+
+					<div class="col-start-2 col-span-4">
+						<label for="composer" class="block text-base font-medium text-gray-900">Composer</label>
+						<div class="mt-2 grid grid-cols-1">
+							<select id="composer" name="composer" autocomplete="composer-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6">
+								<option>Bach, Johann Sebastian</option>
+								<option>Mozart, Wolfgang Amadeus</option>
+								<option>Brahms, Johannes</option>
+							</select>
+							<svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+							</svg>
+						</div>
+					</div>
+
+					<div class="col-start-2 col-span-4">
+						<label for="category" class="block text-base font-medium text-gray-900">Category</label>
+						<div class="mt-2 grid grid-cols-1">
+							<select id="category" name="category" autocomplete="category-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6">
+								<option class="font-bold">1.0 Music without Bass</option>
+								<option>1.1 Solos without Bass</option>
+								<option>1.2 Duets for 2 Oboes</option>
+								<option class="font-bold">1.0 Music without Bass</option>
+								<option>1.1 Solos without Bass</option>
+								<option>1.2 Duets for 2 Oboes</option>
+							</select>
+							<svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+							</svg>
+						</div>
+					</div>
+
+					<div class="col-start-2 col-span-6">
+						<button type="submit" class="rounded-md bg-blue-400 px-3 py-1 font-semibold text-white hover:bg-blue-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Search</button>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="bg-blue-10 text-gray-800 my-10">
+				<p class="my-2">
+					This project, inspired by Bruce Haynes' famous book 'Music for Oboe', presents an interactive and continuously updated database containing music for and with oboe up to 1800.
+					It offers many search functions which may be combined and allows an unambiguous identification of the pieces listed by including incipits (this work is still in progress).
+					To utilise all these functions have a look at the How to Use - Page.
+				</p>
+				<p class="my-2">
+					Words cannot express how thankful I feel to Jens Kanschik for writing the software running this catalog.
+					I am honored that, through my commitment to this project, a part of Bruce Haynes' work will live on.
+				</p>
+				<p class="my-2">
+					I wish you a successful catalog search and hope you enjoy finding and performing our oboe music!
+					Peter Wuttke
+				</p>
+				<p class="my-2">
+					NEW !!! Folllow the news concerning the catalog on The Haynes Catalog on Facebook  Facebook
+				</p>
 			</section>
 		</div>
 	</body>
