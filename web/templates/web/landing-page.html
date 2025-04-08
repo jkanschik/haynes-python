@@ -10,35 +10,43 @@
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-blue-10 font-sans-serif leading-normal tracking-normal">
+	<body class="font-sans-serif text-slate-600 leading-normal tracking-normal">
 
-		<nav class="bg-gray-800">
-			<div class="bg-[url(/static/web/images/background.jpg)] bg-cover container mx-auto flex justify-between items-center">
+		<nav class="bg-[url(/static/web/images/background.jpg)] bg-cover px-5">
+			<div class="flex justify-between">
 
-				<img src="{% static 'web/images/title.png' %}" class="" height="20px">
+				<img src="{% static 'web/images/title-2.png' %}" class="my-2">
 
-				<div class="space-x-4">
-					<a href="#" class="text-gray-300 hover:text-white">Home</a>
-					<a href="#" class="text-gray-300 hover:text-white">About</a>
-					<a href="#" class="text-gray-300 hover:text-white">Services</a>
-					<a href="#" class="text-gray-300 hover:text-white">Contact</a>
+				<div class="mt-auto mb-4 text-lg divide-x-2 divide-solid divide-gray-100">
+					<a href="#" class="px-5 text-gray-100 hover:text-white">Home</a>
+					<a href="#" class="px-5 text-gray-100 hover:text-white">Search</a>
+					<a href="#" class="px-5 text-gray-100 hover:text-white">Info</a>
+					<a href="#" class="px-5 text-gray-100 hover:text-white">Login</a>
 				</div>
 			</div>
 		</nav>
 
 
-		<div class="mx-auto w-5/8">
+		<div class="mx-auto w-8/12">
 
-			<section class="flex bg-gray-10 items-center justify-center my-10">
-				<h1 class="text-5xl">Welcome to The Haynes Catalog</h1>
+			<section class="flex bg-slate-50 items-center pt-10 justify-center">
+				<h1 class="text-5xl small-caps">Welcome to <span style="font-variant:small-caps">The Haynes Catalog</span></h1>
 			</section>
 
-			<section class="bg-blue-50 my-10 py-5 -mx-10 px-10">
-				<h1 class="font-semi-bold text-2xl text-gray-900 ">Quick Search</h1>
+			<section class="bg-slate-50 py-5 px-15">
+				<p class="my-2 text-justify">
+					This project, inspired by <a class="text-blue-900 font-bold" href="">Bruce Haynes</a>' famous book 'Music for Oboe', presents an interactive and continuously updated database containing music for and with oboe up to 1800.
+					It offers many search functions which may be combined and allows an unambiguous identification of the pieces listed by including incipits (this work is still in progress).
+					To utilise all these functions have a look at the <a class="text-blue-900 font-bold" href="">How to Use - Page</a>.
+				</p>
+			</section>
+
+			<section class="bg-slate-200 py-5 px-30 -mx-15">
+				<h1 class="font-semi-bold text-2xl">Quick Search</h1>
 				<div class="grid grid-cols-6 gap-y-6 my-5">
 
 					<div class="col-start-2 col-span-4">
-						<label for="composer" class="block text-base font-medium text-gray-900">Composer</label>
+						<label for="composer" class="block text-base font-medium text-slate-900">Composer</label>
 						<div class="mt-2 grid grid-cols-1">
 							<select id="composer" name="composer" autocomplete="composer-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6">
 								<option>Bach, Johann Sebastian</option>
@@ -69,30 +77,47 @@
 					</div>
 
 					<div class="col-start-2 col-span-6">
-						<button type="submit" class="rounded-md bg-blue-400 px-3 py-1 font-semibold text-white hover:bg-blue-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Search</button>
+						<button type="submit" class="rounded-md bg-slate-600 px-3 py-1 font-semibold text-white hover:bg-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Search</button>
 					</div>
 
 				</div>
 			</section>
 
-			<section class="bg-blue-10 text-gray-800 my-10">
-				<p class="my-2">
-					This project, inspired by Bruce Haynes' famous book 'Music for Oboe', presents an interactive and continuously updated database containing music for and with oboe up to 1800.
-					It offers many search functions which may be combined and allows an unambiguous identification of the pieces listed by including incipits (this work is still in progress).
-					To utilise all these functions have a look at the How to Use - Page.
-				</p>
-				<p class="my-2">
+			<section class="bg-slate-50 py-5 px-15">
+				<p class="my-2 text-justify">
 					Words cannot express how thankful I feel to Jens Kanschik for writing the software running this catalog.
 					I am honored that, through my commitment to this project, a part of Bruce Haynes' work will live on.
 				</p>
-				<p class="my-2">
+				<p class="my-2 text-justify">
 					I wish you a successful catalog search and hope you enjoy finding and performing our oboe music!
 					Peter Wuttke
 				</p>
-				<p class="my-2">
+				<p class="my-2 text-justify">
 					NEW !!! Folllow the news concerning the catalog on The Haynes Catalog on Facebook  Facebook
 				</p>
 			</section>
+
+			<section class="bg-slate-200 py-5 px-15">
+				<h2 class="text-2xl">Please note</h2>
+				<p class="mt-5 text-justify">
+					The quantity and quality of this database depend on your participation. You can help in many ways:
+				</p>
+				<ol class="mt-2 list-decimal list-inside">
+					<li>
+						If you know of any pieces not included in the catalog please send me an e-mail.
+					</li>
+					<li>
+						If you find mistakes, or know more details about a certain piece, please write an addition in the Full Record.
+					</li>
+					<li>
+						Please have a look at the List of Problems, and send me an e-mail.
+					</li>
+					<li>
+						Please help me to collect the missing incipits.
+					</li>
+				</ol>
+			</section>
+
 		</div>
 	</body>
 </html>
